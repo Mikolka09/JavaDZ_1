@@ -23,7 +23,7 @@ public class MyArray {
             for (int i = 0; i < get.length; i++)
                 arrNew[i] = Integer.parseInt(get[i]);
             this.arr = arrNew;
-            System.out.println("Массив создан!");
+            System.out.println("Массив заполнен!");
         } else {
             System.out.println("Количество введенных чисел больше размера массива!");
         }
@@ -35,7 +35,7 @@ public class MyArray {
         for (int i = 0; i < size; i++) {
             arr[i] = rand.nextInt(max);
         }
-        System.out.println("Массив создан!");
+        System.out.println("Массив заполнен!");
         this.arr = arr;
     }
 
@@ -65,7 +65,7 @@ public class MyArray {
             sum += this.arr[i];
         }
         System.out.println();
-        System.out.printf("Среднеарифметическое: %s", sum / size);
+        System.out.printf("Среднее арифметическое: %s", sum / size);
     }
 
     public void sortAsc() {
