@@ -1,6 +1,7 @@
 package DZ_4;
 
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Main {
@@ -14,5 +15,6 @@ public class Main {
         System.out.println("Max: " + arr.maxIntArray(arrI));
         System.out.println("Min: " + arr.minIntArray(arrI));
         System.out.println("Avg: " + arr.avgIntArray(arrI));
+
     }
 }
