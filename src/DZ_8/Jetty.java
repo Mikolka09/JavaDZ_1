@@ -7,8 +7,8 @@ import java.util.*;
 @Data
 public class Jetty implements Runnable {
 
-    Queue<Ship> ships;
-    Queue<People> peoples;
+    Queue<DZ_8.Ship> ships;
+    Queue<DZ_8.People> peoples;
     double interval;
     int peopleAvg;
     int shipAvg;
@@ -44,13 +44,13 @@ public class Jetty implements Runnable {
         while (timeWork < timeWorkJetty) {
 
             if (timeWork % this.peopleAvg == 0) {
-                People plp = new People(cntPeople++);
+                DZ_8.People plp = new DZ_8.People(cntPeople++);
                 System.out.println("Пришел человек на причал!");
                 this.peoples.add(plp);
                 System.out.printf("\nКоличество людей на причале: %s\n", peoples.size());
             }
             if (timeWork % this.shipAvg == 0) {
-                Ship ship = new Ship(cntShip++);
+                DZ_8.Ship ship = new DZ_8.Ship(cntShip++);
                 System.out.println("Пришел корабель на причал!");
                 Thread.sleep(100);
                 int type = rnd.nextInt(2);
@@ -81,7 +81,7 @@ public class Jetty implements Runnable {
 
     private void loadingPeople() throws InterruptedException {
         System.out.println("Началась посадка людей на корабль!");
-        Ship ship = ships.peek();
+        DZ_8.Ship ship = ships.peek();
         int vacancies = ship.vacancies;
         ships.remove();
         while (vacancies > 0) {
