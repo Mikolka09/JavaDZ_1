@@ -9,5 +9,5 @@ import java.util.TreeMap;
 @Data
 public class Dictionary {
     TreeMap<String, ArrayList<String>> dictionary;
-    ArrayList<String> worlds;
+    ArrayList<World> worlds;
 }
