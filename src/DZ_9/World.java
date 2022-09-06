@@ -2,8 +2,10 @@ package DZ_9;
 
 import lombok.Data;
 
+import java.util.Collections;
+
 @Data
-public class World {
+public class World  {
     String name;
     int count;
 
@@ -11,4 +13,7 @@ public class World {
         this.name = str;
         this.count = count;
     }
+
+
+
 }
