@@ -2,7 +2,6 @@ package DZ_9;
 
 import lombok.Data;
 
-import java.util.Collections;
 
 @Data
 public class World  {
