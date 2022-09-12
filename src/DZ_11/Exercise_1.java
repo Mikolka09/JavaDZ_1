@@ -22,20 +22,18 @@ public class Exercise_1 {
             BufferedReader bf_1 = new BufferedReader(file_1);
             BufferedReader bf_2 = new BufferedReader(file_2);
 
-            ArrayList<String> line_1 = new ArrayList<>();
-            ArrayList<String> line_2 =new ArrayList<>();
-            while (bf_1.readLine() != null) {
-                line_1.add(bf_1.readLine());
+            ArrayList<String> line_2 = new ArrayList<>();
+            String st_2 = "";
+            String line = "";
+            while ((st_2 = bf_2.readLine()) != null) {
+                line_2.add(st_2);
             }
-            while (bf_2.readLine() != null) {
-                line_2.add(bf_2.readLine());
-            }
-            for (String st_1 : line_1) {
-                for (String st_2 : line_2) {
-                    if (st_1 != st_2) System.out.println(st_1);
+            System.out.println("");
+            while ((line = bf_1.readLine()) != null) {
+                if(!line_2.contains(line)){
+                    System.out.println(line);
                 }
             }
-
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         } finally {
