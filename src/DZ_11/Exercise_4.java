@@ -12,7 +12,7 @@ public class Exercise_4 {
         try {
             System.out.print("\nВведите путь к файлу: ");
             String path = scan.nextLine();
-            file = new FileWriter(path, true);
+            file = new FileWriter(path);
             System.out.print("\nВведите целочисленные массива через пробел: ");
             String[] arrSt = scan.nextLine().split(" ");
             int[] arr = new int[arrSt.length];
