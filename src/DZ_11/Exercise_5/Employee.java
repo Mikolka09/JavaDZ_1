@@ -2,8 +2,10 @@ package DZ_11.Exercise_5;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class Employee {
+public class Employee implements Serializable {
     String firstName;
     String lastName;
     String job;
@@ -22,9 +24,9 @@ public class Employee {
         this.age = age;
     }
 
-    public String print() {
-        return "\t" + this.firstName + "\t" + this.lastName + "\t" + this.job + "\t" +
-                this.department + "\t" + this.age;
+    public void print() {
+        System.out.println("\t" + this.firstName + "\t\t" + this.lastName + "\t\t" + this.job + "\t" +
+                this.department + "\t\t" + this.age);
     }
 
 
