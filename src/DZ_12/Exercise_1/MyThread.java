@@ -3,27 +3,28 @@ package DZ_12.Exercise_1;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class MyThread extends Thread{
-
+public class MyThread extends Thread {
+    ArrayList<Integer> arrayList;
     Random rand = new Random();
 
-    public MyThread(String name){
+    public MyThread(String name) {
         super(name);
     }
 
-    public void run(ArrayList<Integer> arrayList){
+    public void run() {
         try {
-            System.out.printf("%s поток запустился...\n",Thread.currentThread().getName());
+            this.arrayList = new ArrayList<>();
+            System.out.printf("%s поток запустился...\n", Thread.currentThread().getName());
             System.out.println("Начинается заполнение массива");
             int bool = 0;
-            while (bool<100){
-                int numb = this.rand.nextInt();
-                arrayList.add(numb);
+            while (bool < 50) {
+                int numb = this.rand.nextInt(1, 500);
+                this.arrayList.add(numb);
                 Thread.sleep(20);
                 bool++;
             }
             System.out.println("Массив заполнен!");
-        }catch (Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
 
