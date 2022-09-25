@@ -1,5 +1,8 @@
 package DZ_13.Exercise_4;
 
+import lombok.Data;
+
+@Data
 public class Projector {
 
     String name;
